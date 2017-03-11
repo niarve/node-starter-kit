@@ -7,7 +7,7 @@ This is a simple nodejs starter kit with the following features:
 * Sass integration
 * HTML file include
 
-This repo is meant to be used as a project template for nodejs
+This repo is meant to be used as a project template
 
 ---
 #### Installation
@@ -45,3 +45,7 @@ This will create a directory 'dest' containing an artifact for deployment. To te
 Then just go to localhost:3000 in your browser!
 
 ---
+
+For open source use, please refer to the [LICENSE]
+
+[LICENSE]: <https://github.com/niarve/node-starter-kit/blob/master/LICENSE>
