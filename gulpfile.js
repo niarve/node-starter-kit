@@ -11,21 +11,21 @@ var gulp = require('gulp'),
     clean = require('gulp-clean'),
     gih = require('gulp-include-html');
 
-gulp.task('js', function() {
+gulp.task('js', () => {
   gulp.src('./src/js/*.js')
     .pipe(uglify())
     .pipe(gulp.dest('dest/assets'))
     .pipe(connect.reload());
 });
 
-gulp.task('sass', function() {
+gulp.task('sass', () => {
   gulp.src('./src/sass/app.scss')
     .pipe(sass().on('error', gutil.log))
     .pipe(gulp.dest('dest/assets'))
     .pipe(connect.reload());
 });
 
-gulp.task('html', function() {
+gulp.task('html', () => {
   gulp.src(['./*.html', './views/*.html'])
     .pipe(gih({
       baseDir:'./views/',
@@ -35,7 +35,7 @@ gulp.task('html', function() {
     .pipe(connect.reload());
 });
 
-gulp.task('connect', function() {
+gulp.task('connect', () => {
   connect.server({
     root: ['dest'],
     port: 8080,
@@ -43,7 +43,7 @@ gulp.task('connect', function() {
   })
 });
 
-gulp.task('watch', function () {
+gulp.task('watch', () => {
   gulp.watch(['./*.html', './templates/*.html'], ['html']);
   gulp.watch(['./src/styles/*.scss'], ['sass']);
   gulp.watch(['./src/scripts/*.js'], ['js']);
@@ -54,7 +54,7 @@ gulp.task('build', ['html', 'sass', 'js']);
 gulp.task('serve', ['build'], serve('dest'));
 
 // gulp.task('deploy', ['build'], function () {
-//   gulp.src('./build/**/*')
+//   gulp.src('./dest/**/*')
 //     .pipe(ghPages({
 //     branch: 'master'
 //     }))
