@@ -1,0 +1,30 @@
+{
+  "name": "node-starter-kit",
+  "version": "1.0.0",
+  "description": "Basic NodeJs Starter kit with utitlites",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niarve/node-starter-kit.git"
+  },
+  "author": "Nathan Iarve",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/niarve/node-starter-kit/issues"
+  },
+  "homepage": "https://github.com/niarve/node-starter-kit#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-include-html": "^1.0.14",
+    "gulp-sass": "^3.1.0",
+    "gulp-serve": "^1.4.0",
+    "gulp-uglify": "^2.0.1"
+  }
+}
