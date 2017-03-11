@@ -51,12 +51,11 @@ gulp.task('watch', function () {
 
 gulp.task('build', ['html', 'sass', 'js']);
 
-// gulp.task('serve', ['build'], serve('build'));
+gulp.task('serve', ['build'], serve('dest'));
 
 // gulp.task('deploy', ['build'], function () {
 //   gulp.src('./build/**/*')
 //     .pipe(ghPages({
-//     remoteUrl: 'https://github.com/niarve/proj5-diamonds-deploy.git',
 //     branch: 'master'
 //     }))
 // });
