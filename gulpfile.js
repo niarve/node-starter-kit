@@ -12,14 +12,14 @@ var gulp = require('gulp'),
     gih = require('gulp-include-html');
 
 gulp.task('js', function() {
-  gulp.src('./app/js/*.js')
+  gulp.src('./src/js/*.js')
     .pipe(uglify())
     .pipe(gulp.dest('dest/assets'))
     .pipe(connect.reload());
 });
 
 gulp.task('sass', function() {
-  gulp.src('./app/sass/app.scss')
+  gulp.src('./src/sass/app.scss')
     .pipe(sass().on('error', gutil.log))
     .pipe(gulp.dest('dest/assets'))
     .pipe(connect.reload());
