@@ -45,8 +45,8 @@ gulp.task('connect', () => {
 
 gulp.task('watch', () => {
   gulp.watch(['./*.html', './templates/*.html'], ['html']);
-  gulp.watch(['./src/styles/*.scss'], ['sass']);
-  gulp.watch(['./src/scripts/*.js'], ['js']);
+  gulp.watch(['./src/sass/*.scss'], ['sass']);
+  gulp.watch(['./src/js/*.js'], ['js']);
 });
 
 gulp.task('build', ['html', 'sass', 'js']);
