@@ -4,16 +4,37 @@ var gulp = require('gulp'),
     gutil = require('gulp-util'),
     connect = require('gulp-connect'),
     sass = require('gulp-sass'),
-    uglify = require('gulp-uglify'),
     concat = require('gulp-concat'),
     serve = require('gulp-serve'),
     ghPages = require('gulp-gh-pages'),
     clean = require('gulp-clean'),
-    gih = require('gulp-include-html');
+    gih = require('gulp-include-html'),
+    gulpWebpack = require('gulp-webpack'),
+    webpack = require('webpack');
 
 gulp.task('js', () => {
-  gulp.src('./src/js/*.js')
-    .pipe(uglify())
+  gulp.src('./src/js/app.js')
+    .pipe(gulpWebpack({
+      entry: [
+        './src/js/app.js',
+      ],
+      output: {
+        filename: 'app.bundle.js',
+      },
+      module: {
+        loaders: [
+          {
+            test: /\.js$/,
+            exclude: 'node_modules', //add bower components later for jquery?
+            loader: "babel-loader",
+            query: {
+              presets: ['es2015']
+            }
+          }
+        ]
+      },
+      plugins: [new webpack.optimize.UglifyJsPlugin()],
+      }, webpack))
     .pipe(gulp.dest('dest/assets'))
     .pipe(connect.reload());
 });
