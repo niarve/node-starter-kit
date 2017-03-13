@@ -28,7 +28,8 @@ gulp.task('js', () => {
             exclude: 'node_modules', //add bower components later for jquery?
             loader: "babel-loader",
             query: {
-              presets: ['es2015']
+              presets: ['es2015'],
+              compact: false,
             }
           }
         ]
