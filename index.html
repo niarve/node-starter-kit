@@ -1,9 +1,13 @@
-<html>
+<!DOCTYPE html>
+<html ng-app="app">
   <head>
     <link rel="stylesheet" href="assets/app.css">
     <script type="text/javascript" src="assets/app.bundle.js"></script>
   </head>
   <body>
     @@include('home')
+    <div ng-controller="mainController as mainCtrl">
+      {{greeting.text}}
+    </div>
   </body>
 </html>
