@@ -77,7 +77,8 @@ gulp.task('serve', ['build'], serve('dest'));
 // gulp.task('deploy', ['build'], function () {
 //   gulp.src('./dest/**/*')
 //     .pipe(ghPages({
-//     branch: 'master'
+//       remoteUrl: 'url to your gh page',
+//       branch: 'master'
 //     }))
 // });
 

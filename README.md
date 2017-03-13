@@ -6,6 +6,9 @@ This is a simple nodejs starter kit with the following features:
 * Gulp as build tool
 * Sass integration
 * HTML file include
+* JS modules
+* ES2015 compatible
+* Easily deployable to GitHub pages (code included but commented out) 
 
 This repo is meant to be used as a project template
 
