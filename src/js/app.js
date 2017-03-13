@@ -8,6 +8,5 @@ entry();
 var angular = require('angular');
 
 var app = angular.module('app', []);
-app.controller('mainController', ['$scope', ($scope) => {
-  $scope.greeting =  {text: 'Hello Angular' };
-}]);
+
+require('./controller.js');
