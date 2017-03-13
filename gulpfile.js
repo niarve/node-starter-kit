@@ -65,7 +65,7 @@ gulp.task('connect', () => {
 });
 
 gulp.task('watch', () => {
-  gulp.watch(['./*.html', './templates/*.html'], ['html']);
+  gulp.watch(['./*.html', './views/*.html'], ['html']);
   gulp.watch(['./src/sass/*.scss'], ['sass']);
   gulp.watch(['./src/js/*.js'], ['js']);
 });
