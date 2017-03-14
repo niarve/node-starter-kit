@@ -1,10 +1,7 @@
 "use strict";
 
-console.log("hello nate");
-
-var entry = require('./entry.js');
-entry();
-
 var app = angular.module('app', []);
 
-require('./controller.js');
+require('./controllers/controller.js');
+require('./directives/directive.js');
+require('./services/service.js');
