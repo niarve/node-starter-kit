@@ -4,6 +4,7 @@
 
 This is a simple nodejs starter kit with the following features:
 * Gulp
+* AngularJs
 * Sass
 * Webpack
 * ES2015
