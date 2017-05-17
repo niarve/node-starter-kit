@@ -62,7 +62,6 @@ Next uncomment out the following in Gulpfile.js
 ```
 and
 ```sh
-    // this task is used to deploy to your very own GitHub Page
     // gulp.task('deploy', ['build'], function () {
     //   gulp.src('./dest/**/*')
     //     .pipe(ghPages({
